@@ -1,11 +1,9 @@
-const { fetchFlyoverTimes } = require('./iss');
+const { nextISSFlyoverTimesforMyLocation } = require('./iss');
 
-const coordinates = { latitude: 43.653226, longitude: -79.3831843 };
-
-fetchFlyoverTimes(coordinates, (error, flyoverTimes) => {
+nextISSFlyoverTimesforMyLocation((error, result) => {
   if (error) {
-    console.log(error);
+    console.error(error);
   } else {
-    console.log(flyoverTimes);
+    console.log(result);
   }
 });
