@@ -72,7 +72,7 @@ const nextISSFlyoverTimesforMyLocation = (cb) => {
       const duration = pass.duration;
       return `Next pass at ${date} for ${duration} seconds!`;
     });
-    const outputString = `The passes are:\n${passes.join('\n')}`;
+    const outputString = `The next flyover times are:\n${passes.join('\n')}`;
     cb(null, outputString);
   });
 };
